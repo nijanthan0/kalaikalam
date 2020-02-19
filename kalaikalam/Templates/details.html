@@ -1,0 +1,23 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Participant_Details</title>
+</head>
+<body>
+
+{% for k, v in data.items %}
+    {{k}} : {{v.0}}
+<br/>
+{% endfor %}
+<img style="width:400px;height: 300px" src="{% static 'img/pasted2.png' %}" alt="">
+<br><br>
+    <button onclick="go_to_home();" style="border: 3px solid #2193b0 ; border-radius: 5px; text-decoration: none; background-color: #2193b0;
+color:black">back</button>
+<script>
+    function go_to_home(){
+        window.location.href = '{% url 'home' %}'
+    }
+</script>
+</body>
+</html>
